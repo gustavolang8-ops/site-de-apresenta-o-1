@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Albuquerque - Sobrancelhas & Cílios</title>
-
-    <!-- Fontes do Google Fonts -->
+    <title>Studio Albuquerque</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Arquivo de Estilos CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabeçalho com Logo Vetorial Responsiva -->
-   <!-- Cabeçalho com o símbolo "mr" elegante e sem achatar -->
+    <!-- Cabeçalho com Logo SVG e Menu Hambúrguer -->
     <header>
         <a href="#inicio" class="logo" aria-label="Studio Albuquerque">
             <svg viewBox="140 140 750 215" xmlns="http://www.w3.org/2000/svg" role="img">
@@ -23,108 +21,107 @@
             </svg>
         </a>
 
-        <nav>
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre Nós</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato" onclick="abrirAbaPorMenu('contato')" class="btn-nav">Agendar Horário</a>
+        <!-- Botão Hambúrguer para Celular -->
+        <button class="btn-hamburguer" id="btn-hamburguer" aria-label="Abrir Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Menu de Navegação -->
+        <nav id="nav-menu">
+            <a href="#inicio" onclick="fecharMenu()">Início</a>
+            <a href="#sobre" onclick="fecharMenu()">Sobre Nós</a>
+            <a href="#servicos" onclick="fecharMenu()">Serviços</a>
+            <a href="#servicos" onclick="fecharMenu(); abrirAbaPorMenu('contato')" class="btn-nav">Agendar Horário</a>
         </nav>
     </header>
 
-    <main>
-        <!-- 1. BANNER PRINCIPAL (INÍCIO) -->
-        <section id="inicio" class="hero">
-            <div class="hero-conteudo">
-                <span class="subtitulo">Realce a beleza do seu olhar</span>
-                <h1>Especialistas em Sobrancelhas & Cílios</h1>
-                <p>Um espaço delicado e acolhedor, pensado para valorizar o seu olhar com todo carinho e cuidado que você merece.</p>
-                <div class="hero-botoes">
-                    <a href="#servicos" class="btn-principal">Conhecer os Serviços</a>
-                </div>
-            </div>
-        </section>
+    <!-- Seção Principal / Banner -->
+    <section id="inicio" class="hero">
+        <div class="hero-conteudo">
+            <h1>Realce a sua beleza natural</h1>
+            <p>Especialistas em sobrancelhas, cílios e estética facial com atendimento exclusivo e personalizado.</p>
+            <a href="#servicos" onclick="abrirAbaPorMenu('contato')" class="btn-principal">Agendar no WhatsApp</a>
+        </div>
+    </section>
 
-        <!-- 2. SEÇÃO SOBRE NÓS -->
-        <section id="sobre" class="secao-sobre">
-            <div class="container-sobre">
-                <span class="subtitulo">Conheça o Studio</span>
-                <h2>Cuidar de você é o nosso prazer</h2>
-                <p class="descricao-sobre">Nascemos do sonho de criar um cantinho de autocuidado, onde cada cliente se sinta única, acolhida e especial. Acreditamos que a beleza mora nos detalhes e na naturalidade do seu olhar.</p>
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="secao-sobre">
+        <h2>Sobre o Studio Albuquerque</h2>
+        <p>No Studio Albuquerque, unimos técnica, sensibilidade e produtos de altíssima qualidade para oferecer procedimentos que valorizam os seus traços com elegância e naturalidade.</p>
+    </section>
 
-                <div class="cards-sobre">
-                    <div class="card-item">
-                        <div class="icone">✨</div>
-                        <h3>Atendimento Exclusivo</h3>
-                        <p>Horários agendados com calma, para dedicar toda a atenção e carinho a você.</p>
-                    </div>
-                    <div class="card-item">
-                        <div class="icone">💖</div>
-                        <h3>Biossegurança & Higiene</h3>
-                        <p>Materiais descartáveis e instrumentos cuidadosamente esterilizados, para o seu bem-estar.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Seção Serviços com Abas -->
+    <section id="servicos" class="secao-abas">
+        <div class="abas-header">
+            <button class="aba-btn ativo" onclick="abrirAba(event, 'sobrancelhas')">Sobrancelhas</button>
+            <button class="aba-btn" onclick="abrirAba(event, 'cilios')">Cílios</button>
+            <button class="aba-btn" onclick="abrirAba(event, 'estetica')">Estética</button>
+            <button class="aba-btn" onclick="abrirAba(event, 'contato')">Contato</button>
+        </div>
 
-        <!-- 3. SEÇÃO DE SERVIÇOS E CONTATO -->
-        <section id="servicos" class="secao-abas">
-            <span class="subtitulo">Especialidades</span>
-            <h2>Nossos Serviços</h2>
+        <!-- Aba 1: Sobrancelhas -->
+        <div id="sobrancelhas" class="aba-conteudo" style="display: block;">
+            <h3>Design & Sobrancelhas</h3>
+            <ul class="lista-servicos">
+                <li>Design Personalizado com Henna</li>
+                <li>Design de Sobrancelhas Simples</li>
+                <li>Brow Lamination</li>
+                <li>Micropigmentação Fio a Fio</li>
+            </ul>
+        </div>
 
-            <div class="abas-botoes">
-                <button class="aba-btn ativo" onclick="abrirAba(event, 'sobrancelhas')">Sobrancelhas</button>
-                <button class="aba-btn" onclick="abrirAba(event, 'cilios')">Cílios</button>
-                <button class="aba-btn aba-destaque" onclick="abrirAba(event, 'contato')">Contato</button>
-            </div>
+        <!-- Aba 2: Cílios -->
+        <div id="cilios" class="aba-conteudo">
+            <h3>Extensão & Cílios</h3>
+            <ul class="lista-servicos">
+                <li>Lash Lifting com Nutrição</li>
+                <li>Extensão Clássica Fio a Fio</li>
+                <li>Volume Russo</li>
+                <li>Manutenção de Cílios</li>
+            </ul>
+        </div>
 
-            <!-- Sobrancelhas -->
-            <div id="sobrancelhas" class="aba-conteudo" style="display: block;">
-                <h3>Design & Mapeamento</h3>
-                <p>Valorize as linhas do seu rosto com um design feito sob medida para você.</p>
-                <ul class="lista-servicos">
-                    <li><span>Design Personalizado Simples</span> <strong>R$ 45</strong></li>
-                    <li><span>Design com Aplicação de Henna</span> <strong>R$ 60</strong></li>
-                    <li><span>Design com Tintura Especial</span> <strong>R$ 70</strong></li>
-                    <li><span>Brow Lamination (Lami)</span> <strong>R$ 130</strong></li>
-                </ul>
-            </div>
+        <!-- Aba 3: Estética -->
+        <div id="estetica" class="aba-conteudo">
+            <h3>Estética Facial</h3>
+            <ul class="lista-servicos">
+                <li>Limpeza de Pele Profunda</li>
+                <li>Hydra Gloss Lips</li>
+                <li>Dermaplaning</li>
+            </ul>
+        </div>
 
-            <!-- Cílios -->
-            <div id="cilios" class="aba-conteudo">
-                <h3>Extensão de Cílios</h3>
-                <p>Técnicas leves e confortáveis para realçar o seu olhar com delicadeza:</p>
-                <ul class="lista-servicos">
-                    <li><span>1. Fio a Fio Clássico Silk</span> <strong>R$ 120</strong></li>
-                    <li><span>2. Volume Híbrido Soft Luxe</span> <strong>R$ 150</strong></li>
-                    <li><span>3. Volume Russo Glamour</span> <strong>R$ 180</strong></li>
-                    <li><span>4. Efeito Raposa (Fox Eye)</span> <strong>R$ 160</strong></li>
-                    <li><span>5. Lash Lifting & Nutrição</span> <strong>R$ 110</strong></li>
-                </ul>
-            </div>
+        <!-- Aba 4: Contato -->
+        <div id="contato" class="aba-conteudo">
+            <h3>Agende seu Horário</h3>
+            <p>Clique no botão abaixo para conversar conosco diretamente no WhatsApp e garantir o seu atendimento!</p>
+            <a href="https://wa.me/5500000000000" target="_blank" class="btn-whatsapp">Falar no WhatsApp</a>
+        </div>
+    </section>
 
-            <!-- Contato -->
-            <div id="contato" class="aba-conteudo">
-                <h3>Agende seu Horário</h3>
-                <p>Será um prazer receber você! Chame no WhatsApp para saber os horários disponíveis.</p>
-
-                <div class="info-contato">
-                    <p>📍 <strong>Endereço:</strong> Av. Darci Vieira - Jardim Itália, Itapetininga - SP, 18200-310</p>
-                    <p>⏰ <strong>Atendimento:</strong> Terça a Sábado: 09h às 19h</p>
-                </div>
-
-                <a href="https://wa.me/5515998473084?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" class="btn-whatsapp">
-                    💬 Chamar no WhatsApp
-                </a>
-            </div>
-        </section>
-    </main>
-
-    <!-- RODAPÉ -->
     <footer>
-        <p>Todos os direitos reservados © 2026 Studio Albuquerque</p>
+        <p>&copy; 2026 Studio Albuquerque. Todos os direitos reservados.</p>
     </footer>
 
+    <!-- Lógica em JavaScript -->
     <script>
+        // Lógica do Menu Hambúrguer
+        const btnHamburguer = document.getElementById('btn-hamburguer');
+        const navMenu = document.getElementById('nav-menu');
+
+        btnHamburguer.addEventListener('click', () => {
+            btnHamburguer.classList.toggle('ativo');
+            navMenu.classList.toggle('ativo');
+        });
+
+        function fecharMenu() {
+            btnHamburguer.classList.remove('ativo');
+            navMenu.classList.remove('ativo');
+        }
+
+        // Lógica das Abas de Serviços
         function abrirAba(evento, idDaAba) {
             let conteudos = document.getElementsByClassName("aba-conteudo");
             for (let i = 0; i < conteudos.length; i++) {
