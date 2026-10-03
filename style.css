@@ -1,4 +1,4 @@
-/* --- ROLAGEM SUAVE --- */
+/* --- ROLAGEM SUAVE (SMOOTH SCROLL) --- */
 html {
     scroll-behavior: smooth;
 }
@@ -245,6 +245,52 @@ nav a:hover {
     font-weight: 600;
 }
 
+/* --- SEÇÃO ENDEREÇO & LOCALIZAÇÃO --- */
+.secao-endereco {
+    max-width: 800px;
+    margin: 60px auto 40px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.secao-endereco h2 {
+    font-size: 1.8rem;
+    color: #831843;
+    margin-bottom: 20px;
+}
+
+.card-endereco {
+    background-color: #ffffff;
+    border: 1px solid #fbcfe8;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-endereco p {
+    margin-bottom: 15px;
+    color: #4a2c38;
+}
+
+.btn-maps {
+    display: inline-block;
+    background-color: #831843;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-maps:hover {
+    background-color: #9d174d;
+}
+
 /* --- RODAPÉ --- */
 footer {
     text-align: center;
@@ -256,7 +302,7 @@ footer {
     margin-top: 60px;
 }
 
-/* --- AJUSTES PARA CELULARES E TABLETS --- */
+/* --- RESPONSIVIDADE (CELULARES) --- */
 @media (max-width: 850px) {
     header {
         justify-content: space-between;
