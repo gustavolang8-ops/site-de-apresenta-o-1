@@ -1,3 +1,8 @@
+/* --- ROLAGEM SUAVE --- */
+html {
+    scroll-behavior: smooth;
+}
+
 /* --- RESET E ESTILOS GERAIS --- */
 * {
     margin: 0;
@@ -312,17 +317,16 @@ footer {
         margin: 40px auto;
     }
 
-    /* Abas no formato 2x2 para celular */
     .abas-header {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
     }
 
     .aba-btn {
-        width: 100%;
-        padding: 10px 5px;
-        font-size: 0.88rem;
+        flex: 1 1 auto;
+        padding: 10px 12px;
+        font-size: 0.85rem;
     }
 
     .aba-conteudo {
