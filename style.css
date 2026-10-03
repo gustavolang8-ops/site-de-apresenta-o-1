@@ -1,0 +1,382 @@
+/* --- RESET E BASES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff9fa;
+    color: #5a4b51;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    background-color: #ffffff;
+    padding: 12px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(244, 114, 182, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: inline-block;
+    width: 170px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.logo-forma {
+    fill: #1a1a1a;
+}
+
+.logo-sub {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-weight: 700;
+    fill: #1a1a1a;
+    letter-spacing: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #665b60;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ec4899;
+}
+
+.btn-nav {
+    background-color: #fce7f3;
+    color: #db2777 !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.btn-nav:hover {
+    background-color: #fbcfe8;
+}
+
+/* --- HERO (BANNER PRINCIPAL) --- */
+.hero {
+    background: linear-gradient(135deg, #fff0f5 0%, #fce7f3 100%);
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero-conteudo {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.subtitulo {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 0.8rem;
+    color: #db2777;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    color: #4a2c38;
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    color: #78646e;
+    font-size: 1rem;
+    margin-bottom: 28px;
+}
+
+.btn-principal {
+    display: inline-block;
+    background-color: #ec4899;
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn-principal:hover {
+    background-color: #db2777;
+    transform: translateY(-2px);
+}
+
+/* --- SEÇÃO SOBRE NÓS --- */
+.secao-sobre {
+    padding: 70px 20px;
+    background-color: #ffffff;
+    text-align: center;
+    border-bottom: 1px solid #fce7f3;
+}
+
+.container-sobre {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.secao-sobre h2 {
+    font-size: 2rem;
+    color: #4a2c38;
+    margin-bottom: 16px;
+}
+
+.descricao-sobre {
+    color: #78646e;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.cards-sobre {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.card-item {
+    background-color: #fff9fa;
+    border: 1px solid #fce7f3;
+    padding: 25px 20px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.card-item .icone {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.card-item h3 {
+    font-size: 1.15rem;
+    color: #4a2c38;
+    margin-bottom: 8px;
+}
+
+.card-item p {
+    font-size: 0.88rem;
+    color: #8c7682;
+}
+
+/* --- SEÇÃO DE ABAS (SERVIÇOS) --- */
+.secao-abas {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.secao-abas h2 {
+    font-size: 2rem;
+    color: #4a2c38;
+    margin-bottom: 25px;
+}
+
+.abas-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.aba-btn {
+    background-color: #ffffff;
+    border: 1px solid #fbcfe8;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    color: #831843;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.aba-btn.ativo {
+    background-color: #ec4899;
+    color: white;
+    border-color: #ec4899;
+}
+
+.aba-conteudo {
+    display: none;
+    background-color: #ffffff;
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(244, 114, 182, 0.08);
+    border: 1px solid #fce7f3;
+    text-align: left;
+    animation: surgir 0.3s ease;
+}
+
+.aba-conteudo h3 {
+    color: #4a2c38;
+    font-size: 1.35rem;
+    margin-bottom: 6px;
+}
+
+.aba-conteudo p {
+    color: #8c7682;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.lista-servicos {
+    list-style: none;
+}
+
+.lista-servicos li {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #fbcfe8;
+    font-size: 0.92rem;
+}
+
+.lista-servicos li:last-child {
+    border-bottom: none;
+}
+
+.lista-servicos strong {
+    color: #db2777;
+}
+
+.info-contato {
+    margin: 18px 0;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin-top: 10px;
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25);
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.82rem;
+    color: #a08c95;
+    border-top: 1px solid #fce7f3;
+    background-color: #ffffff;
+}
+
+@keyframes surgir {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- AJUSTES EXCLUSIVOS PARA CELULAR --- */
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    .btn-nav {
+        padding: 6px 14px;
+        font-size: 0.82rem;
+    }
+
+    .hero {
+        padding: 45px 16px;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .secao-sobre {
+        padding: 45px 16px;
+    }
+
+    .secao-sobre h2 {
+        font-size: 1.6rem;
+    }
+
+    .secao-abas {
+        margin: 40px auto;
+    }
+
+    .aba-conteudo {
+        padding: 20px 16px;
+    }
+
+    .lista-servicos li {
+        font-size: 0.86rem;
+        gap: 10px;
+    }
+}
