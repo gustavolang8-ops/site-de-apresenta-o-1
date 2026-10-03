@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Arquivo de Estilos CSS (v2 para atualizar o cachê do celular) -->
-    <link rel="stylesheet" href="style.css?v=2">
+    <!-- Arquivo de Estilos CSS (v3 para atualizar o cachê) -->
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 
@@ -41,7 +41,7 @@
     <section id="inicio" class="hero">
         <div class="hero-conteudo">
             <h1>Realce a sua beleza natural</h1>
-            <p>Especialistas em sobrancelhas, cílios e estética facial com atendimento exclusivo e personalizado.</p>
+            <p>Especialistas em sobrancelhas e cílios com atendimento exclusivo e personalizado.</p>
             <a href="#servicos" onclick="abrirAbaPorMenu('contato')" class="btn-principal">Agendar no WhatsApp</a>
         </div>
     </section>
@@ -57,7 +57,6 @@
         <div class="abas-header">
             <button class="aba-btn ativo" onclick="abrirAba(event, 'sobrancelhas')">Sobrancelhas</button>
             <button class="aba-btn" onclick="abrirAba(event, 'cilios')">Cílios</button>
-            <button class="aba-btn" onclick="abrirAba(event, 'estetica')">Estética</button>
             <button class="aba-btn" onclick="abrirAba(event, 'contato')">Contato</button>
         </div>
 
@@ -83,17 +82,7 @@
             </ul>
         </div>
 
-        <!-- Aba 3: Estética -->
-        <div id="estetica" class="aba-conteudo">
-            <h3>Estética Facial</h3>
-            <ul class="lista-servicos">
-                <li>Limpeza de Pele Profunda</li>
-                <li>Hydra Gloss Lips</li>
-                <li>Dermaplaning</li>
-            </ul>
-        </div>
-
-        <!-- Aba 4: Contato -->
+        <!-- Aba 3: Contato -->
         <div id="contato" class="aba-conteudo">
             <h3>Agende seu Horário</h3>
             <p>Clique no botão abaixo para conversar conosco diretamente no WhatsApp e garantir o seu atendimento!</p>
