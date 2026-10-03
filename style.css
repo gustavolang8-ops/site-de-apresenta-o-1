@@ -34,19 +34,21 @@ header {
 }
 
 .logo {
-    display: inline-block;
-    width: 170px;
+    display: inline-flex;
+    align-items: center;
+    width: 140px;
+    height: 40px;
     text-decoration: none;
     transition: transform 0.3s ease;
 }
 
 .logo:hover {
-    transform: scale(1.02);
+    transform: scale(1.04);
 }
 
 .logo svg {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 }
 
