@@ -324,10 +324,12 @@ footer {
 
 /* --- AJUSTES EXCLUSIVOS PARA CELULAR --- */
 @media (max-width: 650px) {
-    header {
-        flex-direction: column;
-        padding: 10px 15px;
-        gap: 10px;
+    .logo {
+        width: 110px;
+        height: 32px;
+    }
+    /* ... restantes regras do telemóvel ... */
+}
     }
 
     .logo {
